@@ -1,0 +1,85 @@
+# my utils
+alias reboot="echo use slash reboot"
+alias keepalive='while (1) do echo toto; sleep 10; done'
+alias dlog='sudo tail -75 -f /var/log/dhcp'
+alias k='killall '
+alias core="cd /tftpboot/core_image ;pwd"
+
+# utils
+alias ls='ls --color=tty '
+alias ls='ls -FG'
+alias l='ls -1c'
+alias ll='ls -l'
+alias psg='ps -ef | grep -v grep | grep '
+alias rm='rm -i'
+alias h='history '
+
+# File is saved under /etc/minirc.* = > If filename is 'dfl' saved as /etc/minirc.dfl
+alias mcom0='echo -ne "\033]0;Serial COM Port: ------ 800-1 ------  \007"; sudo minicom -z --color=on'
+alias mcom1='echo -ne "\033]0;Serial COM Port: ------ 800-2 ------  \007"; sudo minicom -z --color=on usb1'
+alias mcom2='echo -ne "\033]0;Serial COM Port: ------ 200 ------  \007"; sudo minicom -z --color=on usb2'
+
+alias myvnc='x11vnc -rfbauth ~/.vnc/passwd > /dev/null 2>&1 &'
+alias xt='xterm -fg cornsilk -bg black -cr red -sb -rightbar -sl 99999 -geometry 100x50 -e /bin/bash &'
+alias myxterm="xterm -sb -sl 100000"
+alias 4xterm='myxterm& myxterm& myxterm& myxterm&'
+
+
+#tmux
+alias tma="tmux -2 attach-session -d -t"
+alias tmd="tmux detach; ps -elf | grep tmux"
+alias tmux='tmux -2'
+
+#vim tmux
+#alias vim='gvim'
+alias gv='gvim -geometry 105x50'
+
+#find & grep
+alias grep='grep -n'
+alias grepl='grep -l'
+alias grepi='grep -i'
+alias g='grep -ns '
+alias f='find . | grep '
+alias fgall='find . | xargs grep -ns '
+alias fg='find . -type f -path "*.c" -o -path "*.h" -o -path "*.xml" | xargs grep -ns '
+alias fgc='find . -name "*.c" | xargs grep -ns '
+alias fgh='find . -name "*.h" | xargs grep -ns '
+alias fgxml='find . -name "*.xml" | xargs grep -ns '
+alias fgsql='find . -name "*.sql" | xargs grep -ns '
+alias fch='find . -name "*.[ch]" | xargs grep '
+alias fc='find . -name "*.c" | xargs grep '
+alias fh='find . -name "*.h" | xargs grep '
+alias fa='find . | xargs grep '
+alias fchl='find . -name "*.[ch]" | xargs grep -l '
+alias fcl='find . -name "*.c" | xargs grep -l '
+alias fhl='find . -name "*.h" | xargs grep -l '
+alias fal='find . | xargs grep '
+alias cgrep='find . -type f -name "*.[ch]" | xargs grep -lsn'
+alias hgrep='find . -type f -name "*.h" | xargs grep -lsn'
+alias ccgrep='find . -type f -name "*.c" | xargs grep -ls'
+alias hhgrep='find . -type f -name "*.h" | xargs grep -ls'
+alias cggrep='find . -type f -name "*.[ch]" | xargs grep -sn '
+alias ccggrep='find . -type f -name "*.[c]" | xargs grep -s '
+alias cggrepn='find . -type f -name "*.[ch]" | xargs grep -sn'
+alias tgrep='find . -type f | xargs grep -ls '
+alias tggrep='find . -type f | xargs grep -s'
+alias mgrep='find . -type f -name "*akefile*"| xargs grep -ls'
+alias mggrep='find . -type f -name "*akefile*"| xargs grep -s'
+
+########################################################################################
+#
+# Setting up gnu tools 
+#
+########################################################################################
+alias mar='${GDB_TOOLS_PREFIX}ar'
+alias mld='${GDB_TOOLS_PREFIX}ld'
+alias mldd='${GDB_TOOLS_PREFIX}ldd'
+alias mnm='${GDB_TOOLS_PREFIX}nm'
+alias mobjdump='${GDB_TOOLS_PREFIX}objdump'
+alias mobjcopy='${GDB_TOOLS_PREFIX}objcopy'
+alias msize='${GDB_TOOLS_PREFIX}size'
+alias mstrings='${GDB_TOOLS_PREFIX}strings'
+alias mstrip='${GDB_TOOLS_PREFIX}strip'
+alias mreadelf='${GDB_TOOLS_PREFIX}readelf'
+alias mgdb='${GDB_TOOLS_PREFIX}gdb -q'
+
