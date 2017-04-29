@@ -265,7 +265,7 @@
 "endif
 let loaded_DoxygenToolkit = 1
 "echo 'Loading DoxygenToolkit...'
-let s:licenseTag = "Copyright (C) 2016 by Aruba, a Hewlett Packard Enterprise company. \<enter>\<enter>"
+let s:licenseTag = "Copyright (C) 2017,  company. \<enter>\<enter>"
 let s:licenseTag = s:licenseTag . "All Rights Reserved.\<enter>"
 let s:licenseTag = s:licenseTag . "This software is an unpublished work and is protected by copyright and\<enter>"
 let s:licenseTag = s:licenseTag . "trade secret law.  Unauthorized copying, redistribution or other use of\<enter>"

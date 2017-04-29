@@ -199,6 +199,6 @@ let g:DoxygenToolkit_returnTag="@Returns   "
 let g:DoxygenToolkit_blockHeader="--------------------------------------------------------------------------"
 let g:DoxygenToolkit_blockFooter="----------------------------------------------------------------------------"
 let g:DoxygenToolkit_authorName="Sudeepto Kumar Roy"
-"let g:DoxygenToolkit_licenseTag="Copyright \(C\) 2002-2009 by Aruba Networks, Inc. /<enter/>"
+"let g:DoxygenToolkit_licenseTag="Copyright \(C\) 2017 /<enter/>"
 
 
