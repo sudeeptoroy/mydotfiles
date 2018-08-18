@@ -1,11 +1,12 @@
 # my utils
 alias reboot="echo use slash reboot"
 alias keepalive='while (1) do echo toto; sleep 10; done'
-alias dlog='sudo tail -75 -f /var/log/dhcp'
 alias k='killall '
-alias core="cd /tftpboot/core_image ;pwd"
+#alias core="cd /tftpboot/core_image ;pwd"
+cdls() { cd "$@" && ls; }
 
 # utils
+alias cd=cdls
 alias ls='ls --color=tty '
 alias ls='ls -FG'
 alias l='ls -1c'
@@ -31,7 +32,6 @@ alias tmd="tmux detach; ps -elf | grep tmux"
 alias tmux='tmux -2'
 
 #vim tmux
-#alias vim='gvim'
 alias gv='gvim -geometry 105x50'
 
 #find & grep

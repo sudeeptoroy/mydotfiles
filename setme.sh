@@ -1,15 +1,14 @@
 #/bin/bash
 
 S_PWD=`pwd`
-
 echo "PWD = $S_PWD"
 
+echo "this script is going to overwrite .vim/.screenrc/.tmux.conf append .bashrc, press ctrl+c to quit, else continue by pressing enter"
+read junk
 
-echo "this script is going to overwrite .vim/.screenrc/.tmux.conf"
-
+echo ". $S_PWD/git-prompt.sh " >> ~/.bashrc
 echo ". $S_PWD/bashrc.1" >> ~/.bashrc
-
-ln -s $S_PWD/aliases ~/.aliases
+echo ". $S_PWD/aliases" >> ~/.bashrc
 
 ln -s $S_PWD/screenrc ~/.screenrc
 

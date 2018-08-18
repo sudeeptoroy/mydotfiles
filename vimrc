@@ -32,7 +32,6 @@ abbreviate d> void sudi_dump(struct sk_buff *skb) {int max_len = 64; int max=(sk
 abbreviate D> #define SUDIECHO(f, a...) {char sudi_buf1[100],sudi_buf2[150]; snprintf (sudi_buf1, sizeof (sudi_buf1),f,##a); snprintf (sudi_buf2, sizeof (sudi_buf2), "echo %s:%d::%s >> /tmp/sudi_logs.txt", __func__, __LINE__, sudi_buf1); system(sudi_buf2); }
 abbreviate E> SUDIECHO("");
 
-
 map <C-L> :grep -w <cword><CR>
 map <C-N> :tn<CR>
 map <C-P> :tp<CR>
